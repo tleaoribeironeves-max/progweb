@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="vetor.css"> 
+    <title>Cadastro de vendas</title>
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro de vendas</h1>
+        
+        <!-- Formulário -->
+        <div class="form-group">
+            <label>Nome do Vendedor:</label>
+            <input type="text" id="vendedor">
+
+            <label>Valor da Venda:</label>
+            <input type="number" id="valor">
+        </div>
+
+        <!-- Botões -->
+        <div class="button-group">
+            <button class="btn-cadastra" onclick="cadastarVenda()">➕ Cadastrar (push)</button>
+            <button class="btn-limpar" onclick="limpar()">➖ Limpar </button>
+            <button class="btn-warning" onclick="removerUltimo()">🗑️ Remover Ultimo</button>
+            <button class="btn-danger" onclick="removerTudo()">🗑️ Remover Tudo</button>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Vendedor</th>
+                    <th>Valor</th>
+                    <th>Desconto</th>
+                    <th>Valor com Desconto</th>
+                    <th>Data/Hora</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="tabelaVendas"></tbody>
+        </table>
+    </div>
+
+   <script src="vendas.js"></script>
+</body>
+</html>
